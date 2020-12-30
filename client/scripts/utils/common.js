@@ -18,7 +18,7 @@ const COMMON = (function () {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4) {
-        if (this.status == 200) { callback(this.responseText); }
+        if (this.status == 200) { callback(JSON.parse(this.responseText)); }
         if (this.status == 400) { dom.innerHTML = 'Page not found'; }
       }
     };
@@ -30,7 +30,7 @@ const COMMON = (function () {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4) {
-        if (this.status == 200) { callback(this.responseText); }
+        if (this.status == 200) { callback(JSON.parse(this.responseText)); }
         if (this.status == 400) { dom.innerHTML = 'Page not found'; }
       }
     };
